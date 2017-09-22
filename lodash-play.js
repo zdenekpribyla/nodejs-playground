@@ -26,10 +26,17 @@ _.forEach(projectName, function(value, key) {
 });
 //console.log(result);
 
+console.log('plain js aproach');
 for (var index = 0; index < result.length; index++) {
     var clearResult = result[index];
     console.log(clearResult.name+ ' ' + clearResult.sessions + ' ' + clearResult.sum);
 }
+console.log();
+console.log('lodash js aproach');
+_.forEach(result, function(value, key) {
+    console.log(value.name + ' ' + value.sessions + ' ' + value.sum);
+});
+
 //console.log(result[0].name+ ' ' + result[0].sessions + ' ' + result[0].sum);
 
 
