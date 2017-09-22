@@ -28,8 +28,8 @@ _.forEach(projectName, function(value, key) {
 
 console.log('plain js aproach');
 for (var index = 0; index < result.length; index++) {
-    var clearResult = result[index];
-    console.log(clearResult.name+ ' ' + clearResult.sessions + ' ' + clearResult.sum);
+    var arrangeResult = result[index];
+    console.log(arrangeResult.name+ ' ' + arrangeResult.sessions + ' ' + arrangeResult.sum);
 }
 console.log();
 console.log('lodash js aproach');
