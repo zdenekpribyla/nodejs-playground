@@ -1,4 +1,5 @@
 var records = require('./file.json');
+var _ = require('lodash');
 
 //vytahni vsechny optm soft > 3 hodiny
 
@@ -9,14 +10,16 @@ var records = require('./file.json');
 //console.log(hoursSpentMoreThree);
 
 var onlyOptumSoftHours = records.filter(function (record) {
-
-    return record.sub_client = 'OptumSoft' && record.hours_spent > 3
+    return record.project === 'Red Bull (V)' && record.hours_spent > 3
 });
 
 console.log(onlyOptumSoftHours);
 console.log(onlyOptumSoftHours.length);
 
-
+var sum = _.sumBy(onlyOptumSoftHours, function (o) {
+    return o.hours_spent;
+});
+console.log(sum);
 
 
 
