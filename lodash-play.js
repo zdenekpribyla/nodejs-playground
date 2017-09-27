@@ -6,7 +6,7 @@ var records = require('./file.json');
 //console.log(numberObjects);
 
 var projectName =_.countBy(records, 'project');
-// console.log(projectName);
+console.log(projectName);
 
 // var result = _.keysIn(projectName);
 // console.log(result);
@@ -22,19 +22,20 @@ _.forEach(projectName, function(value, key) {
         sessions: value,
         sum: currentProjectHours.toFixed(2)
     };
+    // console.log(object);
     result.push(object)
 });
-//console.log(result);
+console.log(result);
 
 console.log('plain js aproach');
 for (var index = 0; index < result.length; index++) {
     var arrangeResult = result[index];
     console.log(arrangeResult.name+ ' ' + arrangeResult.sessions + ' ' + arrangeResult.sum);
 }
-console.log();
-console.log('lodash js aproach');
+//add row
+console.log('\nLodash js aproach');
 _.forEach(result, function(value, key) {
-    console.log(value.name + ' ' + value.sessions + ' ' + value.sum);
+    console.log(value.name + '\t\t' + value.sessions + '\t\t' + value.sum);
 });
 
 //console.log(result[0].name+ ' ' + result[0].sessions + ' ' + result[0].sum);
