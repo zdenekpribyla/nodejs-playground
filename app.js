@@ -1,5 +1,61 @@
 // var file = require('./file.json');
-//
+var records = require('./file.json');
+
+
+//get unique array with project name
+
+
+var uniqueProjects = [];
+// var uniqueProjects = [' Horizon (V)', ' Control Panel (V)'];
+
+for (var i = 0; i < records.length; i++) {
+    var record = records[i];
+    //console.log(record.project);
+    var projectName = record.project;
+
+    console.log('\nprojectName: ' + projectName);
+
+    for (var index = 0; index < uniqueProjects.length; index++) {
+        var uniqueName = uniqueProjects[index];
+
+        if (projectName === uniqueName) {
+
+        }
+
+        // if (uniqueName 'tam jeste neni')  {
+        //     uniqueProjects.push(uniqueName);
+        // } else { 'jdi dal'}
+
+    }
+
+console.log();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
 // //console.log(file.length);
 //
