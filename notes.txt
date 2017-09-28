@@ -1,0 +1,13 @@
+
+
+--
+Sample WordPress API
+
+https://www.sitepoint.com/wordpress-json-rest-api/
+https://www.sitepoint.com/wp-json/wp/v2/posts
+
+
+
+--
+Other sample APIs
+https://www.sitepoint.com/10-example-json-files/
