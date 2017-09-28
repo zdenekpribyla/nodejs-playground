@@ -4,29 +4,32 @@ var postRecords = require('./posts.json');
 
 
 //vylistuj vsechny title v post.json
-var allPostTitle = postRecords.map(function (record) {
-    return record.title.rendered
-});
+// var allPostTitle = postRecords.map(function (record) {
+//     return record.title.rendered
+// });
 //console.log(allPostTitle);
+
+//nakoduj indexOf
+
 
 
 // array.indexOf(item)
-var postRecordsFilter = postRecords.filter(function (record) {
-
-    var tags = record.tags;
-    // console.log(tags);
-    //
-    // console.log('index: ' + tags.indexOf(11205) );
-
-    return tags.indexOf(11205) >= 0
-});
-
-var onlyTitles = postRecordsFilter.map(function(title) {
-    return title.title.rendered
-});
-// console.log('postRecordsFilter');
-//console.log(postRecordsFilter);
-console.log(onlyTitles);
+// var postRecordsFilter = postRecords.filter(function (record) {
+//
+//     var tags = record.tags;
+//     // console.log(tags);
+//     //
+//     // console.log('index: ' + tags.indexOf(11205) );
+//
+//     return tags.indexOf(11205) >= 0
+// });
+//
+// var onlyTitles = postRecordsFilter.map(function(title) {
+//     return title.title.rendered
+// });
+// // console.log('postRecordsFilter');
+// //console.log(postRecordsFilter);
+// console.log(onlyTitles);
 
 //vylistuj vsechny clanky s tag 11205
 // var postWithSpecifyTag = [];
