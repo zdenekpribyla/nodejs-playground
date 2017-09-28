@@ -1,6 +1,8 @@
 var array = [6, 4, 4, 4, 9, 6, 7, 6, 6, 1, 'ahoj', false, false];
 var uniqueArray = [];
 
+
+
 // for (var i = 0; i < array.length; i++) {
 //     // console.log('for loop 1');
 //     var item = array[i];
@@ -63,14 +65,14 @@ var uniqueArray = [];
 // console.log(toUnique(array));
 
 // 3. aproach
-var unique = array.filter(function (item, index, array) {
-    console.log('\n\nitem: ' + item);
-    console.log('i ' + index);
-    console.log('ar ' + array);
-    console.log('array.indexOf(item) ' + array.indexOf(item));
-    return array.indexOf(item) === index;
-});
-console.log(unique);
+// var unique = array.filter(function (item, index, array) {
+//     console.log('\n\nitem: ' + item);
+//     console.log('i ' + index);
+//     console.log('ar ' + array);
+//     console.log('array.indexOf(item) ' + array.indexOf(item));
+//     return array.indexOf(item) === index;
+// });
+// console.log(unique);
 
 // // // 4. aproach
 // function uniqueArray2(arr) {
