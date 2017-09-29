@@ -1,13 +1,34 @@
 var array = [6, 4, 4, 4, 9, 6, 7, 6, 6, 1, 'ahoj', false, false];
+var putNumber = 10;
 var uniqueArray = [];
+
+
+// zdenekIndexOf
+//zde ziskam pozici cisla
+var getPosition = function (elementToFind, array) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === elementToFind) {
+            return i;
+        }
+        else return -1
+    }
+};
+if (getPosition >= 0) {
+    uniqueArray.push(putNumber);
+    console.log('push');
+}
+
+console.log(getPosition(putNumber, array));
+console.log(uniqueArray);
 
 
 
 // for (var i = 0; i < array.length; i++) {
 //     // console.log('for loop 1');
 //     var item = array[i];
-//     //console.log(item);
-//
+//     console.log(item);
+// }
+
 //     if(i === 0) {
 //         console.log('i je 0 a proto pushuju prvni objek at je tam aspon jeden');
 //         uniqueArray.push(item)
