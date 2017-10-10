@@ -3,16 +3,21 @@ var _ = require('lodash');
 var postRecords = require('./posts.json');
 
 
-//vylistuj vsechny title v post.json
-// var allPostTitle = postRecords.map(function (record) {
-//     return record.title.rendered
-// });
-//console.log(allPostTitle);
+var findAuthor = postRecords.map(function(record){
+    return record.author
+})
+console.log(findAuthor)
 
-//nakoduj indexOf
-
-
-
+var findAuthor = [];
+for (var i = 0; i < postRecords.length; i++) {
+    var singlePost = postRecords[i];
+    for (var index = 0; index < singlePost.status.length; index++)
+         var postStatus = singlePost.status[index];
+    if ( postStatus !== 'publish') {
+        findAuthor.push(singlePost.author)
+    }
+}
+console.log(findAuthor);
 // array.indexOf(item)
 // var postRecordsFilter = postRecords.filter(function (record) {
 //
@@ -27,25 +32,25 @@ var postRecords = require('./posts.json');
 // var onlyTitles = postRecordsFilter.map(function(title) {
 //     return title.title.rendered
 // });
-// // console.log('postRecordsFilter');
-// //console.log(postRecordsFilter);
+// console.log('postRecordsFilter:');
+// console.log(postRecordsFilter);
 // console.log(onlyTitles);
 
-//vylistuj vsechny clanky s tag 11205
+// vylistuj vsechny clanky s tag 11205
 // var postWithSpecifyTag = [];
 // for (var i = 0; i < postRecords.length; i++) {
 //     var singlePost = postRecords[i];
-//     //console.log('singlepost :' + singlePost);
+//     console.log('singlepost :' + singlePost);
 //
 //     for (var index = 0; index < singlePost.tags.length; index++) {
 //         var singleTag = singlePost.tags[index];
 //         //console.log('singletag: ' + singleTag + '\n' + singlePost.title.rendered);
-//         if (singleTag === 11205) {
+//         if (singleTag === 9802) {
 //             postWithSpecifyTag.push(singlePost.title.rendered)
 //         }
 //     }
 // }
-// console.log(postWithSpecifyTag);
+//  console.log(postWithSpecifyTag);
 
 // //vylistuj vsechny zaznamy projektu records
 // var allProjectsNameList = records.map(function (record) {
@@ -69,8 +74,8 @@ var postRecords = require('./posts.json');
 // var hoursSpentMoreThree = records.filter(function (record) {
 //     return record.hours_spent > 3
 // });
-
-//console.log(hoursSpentMoreThree);
+//
+// console.log(hoursSpentMoreThree);
 
 // var onlyOptumSoftHours = records.filter(function (record) {
 //     return record.project === 'Red Bull (V)' && record.hours_spent > 3
