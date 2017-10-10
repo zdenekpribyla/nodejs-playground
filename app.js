@@ -27,7 +27,7 @@ for (var i = 0; i < records.length; i++) {
         // } else { 'jdi dal'}
 
     }
-
+}
 console.log();
 
 
