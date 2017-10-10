@@ -3,31 +3,26 @@ var putNumber = 10;
 var uniqueArray = [];
 
 
+
+
 // zdenekIndexOf
 //zde ziskam pozici cisla
-var getPosition = function (elementToFind, array) {
-    for (var i = 0; i < array.length; i++) {
-        if (array[i] === elementToFind) {
-            return i;
-        }
-        else return -1
-    }
-};
-if (getPosition >= 0) {
-    uniqueArray.push(putNumber);
-    console.log('push');
-}
-
-console.log(getPosition(putNumber, array));
-console.log(uniqueArray);
-
+// function getPosition(elementToFind, arrayElements) {
+//     for (index = 0; index < arrayElements.length; index++) {
+//         if (elementToFind === arrayElements[index]) {
+//             return index;
+//         }
+//     }
+//     return -1
+// }
+//console.log(getPosition(4, array));
 
 
 // for (var i = 0; i < array.length; i++) {
-//     // console.log('for loop 1');
-//     var item = array[i];
-//     console.log(item);
+//     var elementToFind = array[i];
+//     //console.log(elementToFind);
 // }
+
 
 //     if(i === 0) {
 //         console.log('i je 0 a proto pushuju prvni objek at je tam aspon jeden');
