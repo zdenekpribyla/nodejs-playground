@@ -13,6 +13,7 @@ var modifyData = function (records, multiplier) {
         };
 
         results.push(object);
+
     }
     return results;
 };

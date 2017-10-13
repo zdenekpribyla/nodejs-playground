@@ -2,22 +2,44 @@ var records = require('./file.json');
 var _ = require('lodash');
 var postRecords = require('./posts.json');
 
+// for (var i = 0; i < postRecords.lenght; i++) {
+//     var singlePost = postRecords[i]
+// }
+// console.log(singlePost);
+//
+//
+//
+//
+// var singlePost = postRecords.map(funciton(record){
+//     return record
+// })
+// console.log(singlePost);
+//
+// var uniqueCategories = singlePost.categories.filter(function(title, index, posts) {
+//     return posts.indexOf(title) === index
+// })
+// console.log(uniqueCategories)
+// var findAuthor = postRecords.map(function (record) {
+//     return record.author
+// })
+// console.log(findAuthor)
+//
+//
+// var findAuthor = [];
+// for (var i = 0; i < postRecords.length; i++) {
+//     var singlePost = postRecords[i];
+//     for (var index = 0; index < singlePost.status.length; index++)
+//          var postStatus = singlePost.status[index];
+//     if (postStatus === 'publish') {
+//         findAuthor.push(singlePost.author)
+//     }
+// }
+// console.log(findAuthor);
 
-var findAuthor = postRecords.map(function(record){
-    return record.author
-})
-console.log(findAuthor)
 
-var findAuthor = [];
-for (var i = 0; i < postRecords.length; i++) {
-    var singlePost = postRecords[i];
-    for (var index = 0; index < singlePost.status.length; index++)
-         var postStatus = singlePost.status[index];
-    if ( postStatus !== 'publish') {
-        findAuthor.push(singlePost.author)
-    }
-}
-console.log(findAuthor);
+
+
+
 // array.indexOf(item)
 // var postRecordsFilter = postRecords.filter(function (record) {
 //

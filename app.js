@@ -1,59 +1,133 @@
-// var file = require('./file.json');
-var records = require('./file.json');
+//var file = require('./file.json');
+var posts = require('./posts.json');
+var genData = require('./generated.json');
+
+
+//only na of female
+
+//console.log(onlyFemale);
+
+// only age +30
+
+//console.log(higherThirty);
+
+//only name and age
+
+
+
+
+
+
+//console.log(eyeColorArray);
+
+
+
+// only age +30
+
+
+//
+// var results = [
+//     {
+//         author: 10,
+//         uniqueTags: [2, 5, 10]
+//     }
+// ];
+
+// author: tags
+
+//console.log('authorAndTagsList');
+var authorAndTagsList = posts.map(function (record) {
+    return {
+        author: record.author,
+        tags: record.tags
+    }
+});
+// console.log(authorAndTagsList);
+
+var allAuthorsIds = posts.map(function (record) {
+    return record.author
+});
+// console.log(allPostList);
+
+
+var uniqueAuthorsIds = allAuthorsIds.filter(function (authorId, index, allAuthorsIdsArray) {
+    return allAuthorsIdsArray.indexOf(authorId) === index
+
+});
+// console.log(uniqueAuthor);
+
+var uniqueAuthorsObjects = uniqueAuthorsIds.map(function (authorId) {
+    return {
+        author: authorId
+    }
+});
+// console.log(uniqueAuthorsObjects);
+
+
+var uniqueAuthorsAndAllTags = uniqueAuthorsObjects.map(function (uniqueAuthorObject) {
+
+
+    authorAndTagsList.forEach(function (authorObject) {
+
+        // console.log('\nauthorObject');
+        // console.log(authorObject);
+
+        if (uniqueAuthorObject.author === authorObject.author) {
+
+
+            return {
+                author: uniqueAuthorObject.author,
+                tags: [authorObject.tags]
+            }
+        }
+    });
+
+    // console.log('\n\nuniqueAuthorsAndAllTags');
+});
+
+// console.log(uniqueAuthorsAndAllTags);
+
+
+// for (var i = 0; i < authorObject.length; i++) {
+//     var uniqueObject = authorObject[i];
+//     if (uniqueObject === authorAndTagsList.tags) {
+//         return {
+//             'author: ': authorObject,
+//             'tags: ': authorAndTagsList.tags
+//         }
+//     }
+//     console.log(uniqueObject);
+// }
+
+
+// var authorAndTags = [];
+//
+// for (var i = 0; i < posts.length; i++) {
+//     var singlePost = posts[i];
+//
+//     authorAndTags.push( {'author': singlePost.author, 'tags': singlePost.tags} )
+// }
+//
+// console.log(authorAndTags);
 
 
 //get unique array with project name
 
 
-var uniqueProjects = [];
-// var uniqueProjects = [' Horizon (V)', ' Control Panel (V)'];
-
-for (var i = 0; i < records.length; i++) {
-    var record = records[i];
-    //console.log(record.project);
-    var projectName = record.project;
-
-    console.log('\nprojectName: ' + projectName);
-
-    for (var index = 0; index < uniqueProjects.length; index++) {
-        var uniqueName = uniqueProjects[index];
-
-        if (projectName === uniqueName) {
-
-        }
-
-        // if (uniqueName 'tam jeste neni')  {
-        //     uniqueProjects.push(uniqueName);
-        // } else { 'jdi dal'}
-
-    }
-}
-console.log();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// var uniqueProjects = [];
+// // var uniqueProjects = [' Horizon (V)', ' Control Panel (V)'];
+//
+// for (var i = 0; i < records.length; i++) {
+//     var record = records[i];
+//     //console.log(record);
+//     var projectName = record.project;
+//     //console.log(projectName);
+//     var uniqueProject = projectName.filter(function (item, index, record) {
+//             return record.indexOf(item) === index
+//         }
+//     );
+//     console.log(uniqueProject);
+// }
 
 
 //
@@ -94,13 +168,13 @@ console.log();
 //
 //
 //     // hoursPerProject - display all projects name and sum of spent hours on every project
-//     // var projectName = file[i].project;
-//     // var hoursSpent =  file[i].hours_spent;
-//     // if (hoursPerProject[projectName]) {
-//     //     hoursPerProject[projectName] = hoursPerProject[projectName] + hoursSpent;
-//     // } else {
-//     //     hoursPerProject[projectName] = hoursSpent;
-//     // }
+//     var projectName = file[i].project;
+//     var hoursSpent =  file[i].hours_spent;
+//     if (hoursPerProject[projectName]) {
+//         hoursPerProject[projectName] = hoursPerProject[projectName] + hoursSpent;
+//     } else {
+//         hoursPerProject[projectName] = hoursSpent;
+//     }
 //     //
 //     // //display hours and and number of work sessions for Red Bull project
 //     // var object = file[i];
